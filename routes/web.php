@@ -20,17 +20,17 @@ Route::get('packages/{package}', 'PackageController@showPackage')->name('showPac
  */
 Route::get('templates/{template}', 'TemplateController@showTemplates')->name('showTemplates');
 
-Route::get('templates/creative', 'TemplateController@showTemplateOne')->name('creative');
+Route::get('template/creative', 'TemplateController@showTemplateOne')->name('creative');
 
-Route::get('templates/agency', 'TemplateController@showTemplateTwo')->name('agency');
+Route::get('template/agency', 'TemplateController@showTemplateTwo')->name('agency');
 
-Route::get('templates/onePageWonder', 'TemplateController@showTemplateThree')->name('onePageWonder');
+Route::get('template/onePageWonder', 'TemplateController@showTemplateThree')->name('onePageWonder');
 
-Route::get('templates/onePageWonder', 'TemplateController@showTemplateFour')->name('onePageWonder');
+Route::get('template/onePageWonder', 'TemplateController@showTemplateFour')->name('onePageWonder');
 
-Route::get('templates/onePageWonder', 'TemplateController@showTemplateFive')->name('onePageWonder');
+Route::get('template/onePageWonder', 'TemplateController@showTemplateFive')->name('onePageWonder');
 
-Route::get('templates/onePageWonder', 'TemplateController@showTemplateSix')->name('onePageWonder');
+Route::get('template/onePageWonder', 'TemplateController@showTemplateSix')->name('onePageWonder');
 /**
  * Auth Routes
  */
