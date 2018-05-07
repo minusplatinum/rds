@@ -180,8 +180,10 @@ class HomeController extends Controller
     public function index()
     {
         $user = Auth::user();
+        $template = Template::findOrFail($user->template_id);
+        $package = Package::findOrFail($user->package_id);
         $quote = Inspiring::quote();
-        return view('pages.dashboard')->with('user', $user)->with('quote', $quote);
+        return view('pages.dashboard')->with('user', $user)->with('quote', $quote)->with('template', $template)->with('package', $package);
     }
 
     public function editProfile()

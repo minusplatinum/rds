@@ -7,7 +7,7 @@
             <div class="card-header col-lg-12">
                 <h4>My Account Information</h4>
             </div>
-           <div class="card-body col-lg-10 ml-auto">
+           <div class="card-body col-lg-10">
                <div class="row">
                     <div class="col-lg-6">
                         <span><b>First Name:</b> </span>{{ $user->fName }}
@@ -57,6 +57,35 @@
                     </div>
                </div>
            </div>
+           <div class="card-header card-footer col-lg-12">
+                <h4>My Package Information</h4>
+            </div>
+            <div class="card-body col-lg-12">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <span><b>Package Name: </b> </span>{{ $package->name }}
+                    </div>
+                    <div class="col-lg-6">
+                            <span><b>Template Name: </b> </span>{{ $template->name }}
+                    </div>
+               </div>
+               <div class="row">
+                    <div class="col-lg-6">
+                        <span><b>Package Price: </b> </span>${{ $package->price }}
+                    </div>
+                    <div class="col-lg-6">
+                            <span><b>Template Type: </b> </span>{{ $template->templateType }}
+                    </div>
+               </div>
+               <div class="row">
+                    <div class="col-lg-6">
+                        <span><b>Package Description: </b> </span>{{ $package->description }}
+                    </div>
+                    <div class="col-lg-6">
+                            <span><b>Template Description: </b> </span>{{ $template->description }}
+                    </div>
+               </div>
+            </div>
            <div class="card-footer col-lg-12 text-center">
                
                 <p class="lead text-muted pt-3"><i>{{ $quote }}</i></p>  
