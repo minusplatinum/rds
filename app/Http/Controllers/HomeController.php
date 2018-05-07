@@ -8,6 +8,7 @@ use App\User;
 use App\Package;
 use App\Template;
 use Stripe\Stripe;
+use Illuminate\Foundation\Inspiring;
 
 use Illuminate\Support\Facades\Auth;
 
@@ -179,8 +180,8 @@ class HomeController extends Controller
     public function index()
     {
         $user = Auth::user();
-        
-        return view('pages.dashboard')->with('user', $user);
+        $quote = Inspiring::quote();
+        return view('pages.dashboard')->with('user', $user)->with('quote', $quote);
     }
 
     public function editProfile()

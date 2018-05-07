@@ -75,9 +75,13 @@
                 @else
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item dropdown">
-                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="{{ url('/dashboard') }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre> {{ Auth::user()->fName }} <span class="caret"></span></a>
+                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="{{ url('/dashboard') }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre> {{ Auth::user()->fName .' '. Auth::user()->lName }} <span class="caret"></span></a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="{{ route('dashboard') }}">Dashboard</a>
+                            <a class="dropdown-item" href="{{ route('EditProfile') }}">Edit Profile</a>
+                            <a class="dropdown-item" href="{{ route('MyPackages') }}">My Packages</a>
+                            <a class="dropdown-item" href="{{ route('PurchaseHistory') }}">Purchase History</a>
+                            <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                 onclick="event.preventDefault();document.getElementById('logout-form').submit();"> {{ __('Logout') }}</a>
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -108,17 +112,7 @@
                     <li class="nav-item m-auto {{ Request::is('contact*') ? 'active' : '' }}"><a class="nav-link" href="{{ url('/contact') }}">Contact</a></li>
                     @guest<li class="d-lg-none d-xl-none nav-item m-auto"><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
                     @else
-                    <li class="nav-item m-auto dropdown">
-                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="{{ url('/dashboard') }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre> {{ Auth::user()->fName }} <span class="caret"></span></a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ route('dashboard') }}">Dashboard</a>
-                            <a class="dropdown-item" href="{{ route('logout') }}"
-                                onclick="event.preventDefault();document.getElementById('logout-form').submit();"> {{ __('Logout') }}</a>
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                @csrf
-                            </form>
-                        </div>
-                    </li>
+                <li class="nav-item m-auto"><a class="nav-link" href="{{ route('dashboard') }}">{{ Auth::user()->fName .' '. Auth::user()->lName }}</a></li>
                     @endguest
                 </ul>
             </div>
