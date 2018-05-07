@@ -1,12 +1,12 @@
 @extends('layouts.app')
 @section('content')
-<div class="container-fluid">
+<div class="container">
     @foreach($packages as $package)
     <div id="{{ str_replace_array(' ', ['',''], $package->name) }}" name="{{ str_replace_array(' ', ['',''], $package->name) }}" class="row px-3 py-3">
-        <div data-aos="fade-down-right" class="packageItem col-lg-6">
-            <img class="img-fluid rounded" src="{{ url($package->imgUrl . $package->imgName) }}" alt="">
+        <div data-aos="fade-down-left" class="packageItem col-lg-4">
+            <img class="img-fluid img-thumbnail rounded" src="{{ url($package->imgUrl . $package->imgName) }}" alt="">
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-8">
             <h2>{{ $package->name }}</h2>
             <ul>
                 <li data-aos="fade-left">{{ $package->features1 }}</li>
@@ -16,9 +16,8 @@
                 <li data-aos="fade-left">{{ $package->features5 }}</li>
                 <li data-aos="fade-left">{{ $package->features6 }}</li>    
             </ul>
-            <p>{{ $package->description }}</p>
-            <p>{{ $package->description }}</p>
         </div>
+        <p>{{ $package->description }}</p>
     </div><!-- /.row -->
     <hr>
     <!-- Call to Action Section -->

@@ -21,8 +21,7 @@
                 <li>{{ $template->feature4 }}</li>
             </ul>
             <div class="text-center text-md-left">
-            
-            
+                <a class="btn btn-block btn-lg btn-success mr-2" href="{{ route('register') }}">Get Started!</a>
             </div>
         </div>
     </div>

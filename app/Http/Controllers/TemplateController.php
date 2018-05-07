@@ -18,17 +18,18 @@ class TemplateController extends Controller
         return view('templates.index')->with('templates', $templates);
     }
 
-    /**
-     * Display the specified template.
-     *
-     * @param  \App\Template  $template
-     * @return \Illuminate\Http\Response
-     */
-    public function showTemplates(Template $template)
+    public function showTemplate(Template $template)
     {
         $templates = $template;
         
         return view('templates.show')->with('template', $templates);
+    }
+
+    public function showTemplateSubPages(Template $template)
+    {
+        
+        
+        return view('templates.index');
     }
 
     public function showTemplateOne(){
@@ -44,14 +45,14 @@ class TemplateController extends Controller
     }
         
     public function showTemplateFour(){
-        return view('templates.onePageWonder.index');
+        return view('templates.cleanBlog.index');
     }
         
     public function showTemplateFive(){
-        return view('templates.onePageWonder.index');
+        return view('templates.businessCasual.index');
     }
         
     public function showTemplateSix(){
-        return view('templates.onePageWonder.index');
+        return view('templates.modernBusiness.index');
     }
 }

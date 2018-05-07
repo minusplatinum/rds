@@ -18,7 +18,9 @@ Route::get('packages/{package}', 'PackageController@showPackage')->name('showPac
 /**
  * Template Routes
  */
-Route::get('templates/{template}', 'TemplateController@showTemplates')->name('showTemplates');
+Route::get('templates/{template}', 'TemplateController@showTemplate')->name('showTemplate');
+
+Route::get('template/{subPages}', 'TemplateController@showTemplateSubPages')->name('showTemplateSubPages');
 
 Route::get('template/creative', 'TemplateController@showTemplateOne')->name('creative');
 
@@ -26,11 +28,11 @@ Route::get('template/agency', 'TemplateController@showTemplateTwo')->name('agenc
 
 Route::get('template/onePageWonder', 'TemplateController@showTemplateThree')->name('onePageWonder');
 
-Route::get('template/onePageWonder', 'TemplateController@showTemplateFour')->name('onePageWonder');
+Route::get('template/cleanBlog', 'TemplateController@showTemplateFour')->name('cleanBlog');
 
-Route::get('template/onePageWonder', 'TemplateController@showTemplateFive')->name('onePageWonder');
+Route::get('template/casualBusiness', 'TemplateController@showTemplateFive')->name('casualBusiness');
 
-Route::get('template/onePageWonder', 'TemplateController@showTemplateSix')->name('onePageWonder');
+Route::get('template/modernBusiness', 'TemplateController@showTemplateSix')->name('modernBusiness');
 /**
  * Auth Routes
  */
