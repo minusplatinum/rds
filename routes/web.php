@@ -54,8 +54,8 @@ Route::patch('customer/select-template', 'HomeController@updateTemplate')->name(
 
 Route::patch('customer/order-confirm', 'HomeController@updateCustomer')->name('UpdateCustomer');
 
-Route::get('home', 'HomeController@index')->name('home');
+Route::get('dashboard', 'HomeController@index')->name('dashboard');
 
-Route::patch('home', 'HomeController@updateProfile')->name('updateProfile');
+Route::patch('dashboard', 'HomeController@updateProfile')->name('updateProfile');
 
 

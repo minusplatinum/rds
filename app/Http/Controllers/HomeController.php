@@ -165,7 +165,7 @@ class HomeController extends Controller
             'currency' => 'usd'
         ));
         
-        return redirect()->route('home')->with('success', 'Your Purchase Was Completed Successfully!')->with('user', $user);
+        return redirect()->route('dashboard')->with('success', 'Your Purchase Was Completed Successfully!')->with('user', $user);
           
     }
 
@@ -179,7 +179,7 @@ class HomeController extends Controller
     public function index()
     {
         $user = Auth::user();
-        return view('pages.home')->with('user', $user);
+        return view('pages.dashboard')->with('user', $user);
     }
 
     /**
@@ -204,7 +204,7 @@ class HomeController extends Controller
         $user->update();
 
         // redirect
-        return redirect()->route('home')->with('user', $user);
+        return redirect()->route('dashboard')->with('user', $user);
     }
 }
 

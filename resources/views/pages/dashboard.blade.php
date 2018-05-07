@@ -2,35 +2,9 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-12">
-            <h1>My Account</h1>
-        </div>            
-    </div>
-
-    <div class="row">
-        <div class="col-4">
-            <!-- Nav tabs -->
-            <ul class="nav nav-tabs flex-column" id="myTab" role="tablist">
-                <li class="nav-item">
-                    <a class="nav-link active" id="viewProfile-tab" data-toggle="tab" href="#viewProfile" role="tab" aria-controls="viewProfile" aria-selected="true">View User Profile</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="updateUser-tab" data-toggle="tab" href="#updateUser" role="tab" aria-controls="updateUser" aria-selected="false">Update User Profile</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="myPackages-tab" data-toggle="tab" href="#myPackages" role="tab" aria-controls="myPackages" aria-selected="false">My Packages</a>
-                </li>                
-                <li class="nav-item">
-                    <a class="nav-link" id="purchaseHistory-tab" data-toggle="tab" href="#purchaseHistory" role="tab" aria-controls="purchaseHistory" aria-selected="false">Purchase History</a>
-                </li>
-            </ul>
-        </div>
-        
         <!-- Tab panes -->
         <div class="col-8">
-            <div class="tab-content">
-                <div class="tab-pane active" id="viewProfile" role="tabpanel" aria-labelledby="viewProfile-tab">
-                    <div class="row">
+                <div class="row">
                         <div class="col-6">
                             <label for="fName">First Name</label>
                             <div>
@@ -110,10 +84,8 @@
                             </div>
                         </div>
                     </div>
-                    <hr>           
-                </div>
-
-                <div class="tab-pane" id="updateUser" role="tabpanel" aria-labelledby="updateUser-tab">
+                    <hr>  
+                <div>
                     <form action="{{ route('updateProfile', $user) }}" method="post">
                         {{ csrf_field() }}
                         {{ method_field('patch') }}
@@ -201,13 +173,12 @@
                         <input type="submit" value="Update Profile" class="form-control">         
                     </form> 
                 </div>
-                <div class="tab-pane" id="myPackages" role="tabpanel" aria-labelledby="myPackages-tab">
-
+                <div>
+                    My Packages
                 </div>
-                <div class="tab-pane" id="purchaseHistory" role="tabpanel" aria-labelledby="purchaseHistory-tab">
-                    
+                <div>
+                   Purchase History 
                 </div>                 
-            </div>
         </div>
     </div>
 </div>
