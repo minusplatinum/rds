@@ -63,16 +63,4 @@ class Pages extends Controller
 
         return redirect('/')->with('success', 'Your Email Was Sent Successfully');
     }
-
-    /**
-     * Displays the profile page.
-     *
-     * @return \Illuminate\Http\Response
-     */
-
-    public function profile()
-    {
-        return view('pages.profile');
-    }
-
 }

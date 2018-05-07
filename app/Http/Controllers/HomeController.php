@@ -179,7 +179,29 @@ class HomeController extends Controller
     public function index()
     {
         $user = Auth::user();
+        
         return view('pages.dashboard')->with('user', $user);
+    }
+
+    public function editProfile()
+    {
+        $user = Auth::user();
+        return view('pages.dashboardEditProfile')->with('user', $user);
+    }
+
+    public function myPackages()
+    {
+        $user = Auth::user();
+        $template = Template::findOrFail($user->template_id);
+        $package = Package::findOrFail($user->package_id);
+
+        return view('pages.dashboardMyPackages')->with('user', $user)->with('template', $template)->with('package', $package);
+    }
+
+    public function purchaseHistory()
+    {
+        $user = Auth::user();
+        return view('pages.dashboardPurchaseHistory')->with('user', $user);
     }
 
     /**

@@ -56,6 +56,12 @@ Route::patch('customer/order-confirm', 'HomeController@updateCustomer')->name('U
 
 Route::get('dashboard', 'HomeController@index')->name('dashboard');
 
+Route::get('dashboard/edit-profile', 'HomeController@editProfile')->name('EditProfile');
+
+Route::get('dashboard/my-packages', 'HomeController@myPackages')->name('MyPackages');
+
+Route::get('dashboard/purchase-history', 'HomeController@purchaseHistory')->name('PurchaseHistory');
+
 Route::patch('dashboard', 'HomeController@updateProfile')->name('updateProfile');
 
 

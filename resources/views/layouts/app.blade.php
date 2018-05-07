@@ -96,44 +96,33 @@
     @yield('content')
     </main>
 
-    <div class="container-fluid py-4 navbar-dark bg-primary">
+    <div class="container-fluid py-2 bg-primary">
         <hr class="mx-5">
-        <div class="d-flex flex-column justify-content-around flex-md-row">
-            <div class="text-center">
-                <h4 class="text-white">Services</h4>
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="packages#webApp">Website Applications</a></li>
-                    <li class="nav-item"><a class="nav-link" href="packages#multiPage">Ecommerce Websites</a></li>
-                    <li class="nav-item"><a class="nav-link" href="packages#singlePage">Responsive Design</a></li>
-                    <li class="nav-item"><a class="nav-link" href="packages#multiPage">Website Redesign</a></li>
-                    <li class="nav-item"><a class="nav-link" href="packages#multiPage">CMS Websites</a></li>
-                </ul>
-            </div>
-            <div class="text-center">
-                <h4 class="text-white">Resources</h4>
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="https://getbootstrap.com/" target="_blank">Bootstrap Framework</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://laravel.com/" target="_blank">Laravel Framework</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://wordpress.com/" target="_blank">WordPress CMS</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://stripe.com/ca" target="_blank">Stripe Payments</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://jquery.com/" target="_blank">jQuery Libraries</a></li>
-                </ul>
-            </div>
-            <div class="text-center">
-                <h4 class="text-white">Company</h4>
-                <ul class="navbar-nav">
-                    <li class="nav-item {{ Request::is('/') ? 'active' : '' }}"><a class="nav-link" href="{{ url('/') }}">Home</a></li>
-                    <li class="nav-item {{ Request::is('packages*') ? 'active' : '' }}"><a class="nav-link" href="{{ url('/packages') }}">Packages</a></li>
-                    <li class="nav-item {{ Request::is('templates*') ? 'active' : '' }}"><a class="nav-link" href="{{ url('/templates') }}">Templates</a></li>
-                    <li class="nav-item {{ Request::is('contact*') ? 'active' : '' }}"><a class="nav-link" href="{{ url('/contact') }}">Contact Us</a></li>
-                    @guest<li class="nav-item"><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <ul class="navbar-nav m-auto">
+                    <li class="nav-item"><a class="navbar-brand" href="{{ url('/') }}">RDS Web Design</a></li>
+                    <li class="nav-item m-auto {{ Request::is('/') ? 'active' : '' }}"><a class="nav-link" href="{{ url('/') }}">Home</a></li>
+                    <li class="nav-item m-auto {{ Request::is('packages*') ? 'active' : '' }}"><a class="nav-link" href="{{ url('packages') }}">Packages</a></li>
+                    <li class="nav-item m-auto {{ Request::is('templates*') ? 'active' : '' }}"><a class="nav-link" href="{{ url('templates') }}">Templates</a></li>
+                    <li class="nav-item m-auto {{ Request::is('contact*') ? 'active' : '' }}"><a class="nav-link" href="{{ url('/contact') }}">Contact</a></li>
+                    @guest<li class="d-lg-none d-xl-none nav-item m-auto"><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
                     @else
-                <li class="nav-item"><a class="nav-link" href="{{ url('/home') }}">{{ Auth::user()->fName }} {{ Auth::user()->lName }}</a></li>
+                    <li class="nav-item m-auto dropdown">
+                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="{{ url('/dashboard') }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre> {{ Auth::user()->fName }} <span class="caret"></span></a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{ route('dashboard') }}">Dashboard</a>
+                            <a class="dropdown-item" href="{{ route('logout') }}"
+                                onclick="event.preventDefault();document.getElementById('logout-form').submit();"> {{ __('Logout') }}</a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>
+                        </div>
+                    </li>
                     @endguest
                 </ul>
             </div>
-        </div>
-
+        </nav>
         <hr class="mx-5">
         <div class="row d-flex justify-content-center">
             <div class="">
@@ -149,7 +138,7 @@
 
         <div class="row d-flex justify-content-center">
             <div class="">
-                <p class="h6">&copy; 2018 All right Reversed.<a class="ml-2 text-dark" href="{{ url('/') }}" target="_blank">RDS Web Design</a></p>
+                <p class="h6 text-white">&copy; 2018 All right Reversed.<a class="ml-2 text-white" href="{{ url('/') }}">RDS Web Design</a></p>
             </div>
         </div>
 
