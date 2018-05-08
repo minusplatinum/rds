@@ -3,7 +3,7 @@
 <!-- My Profile Container -->
 <div class="container">
     <div class="card m-3 p-3">
-        <div class="row">
+        <div class="row d-flex justify-content-center">
             <div class="card-header col-lg-12">
                 <h4>My Account Information</h4>
             </div>
