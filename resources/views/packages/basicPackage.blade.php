@@ -44,7 +44,7 @@
                         </div>
                         <div class="col-lg-6">
                             <ul>
-                                <li>Bring your own paid template.</li>
+                                <li>Bring your own paid template or theme.</li>
                                 <li>Basic CMS and Ecommerce installations.</li>
                                 <li>Responsive image galleries and content sliders.</li>
                             </ul>
