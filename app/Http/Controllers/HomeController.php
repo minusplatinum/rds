@@ -204,7 +204,10 @@ class HomeController extends Controller
     public function purchaseHistory()
     {
         $user = Auth::user();
-        return view('pages.dashboardPurchaseHistory')->with('user', $user);
+        $template = Template::findOrFail($user->template_id);
+        $package = Package::findOrFail($user->package_id);
+
+        return view('pages.dashboardPurchaseHistory')->with('user', $user)->with('template', $template)->with('package', $package);
     }
 
     /**
