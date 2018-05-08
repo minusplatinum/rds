@@ -26,7 +26,7 @@
             <p>Think a {{ $package->name }} is for you? Click the link to get started!</p>
         </div>
         <div data-aos="fade-right" class="col-md-4">
-        <a class="btn btn-lg btn-success btn-block" href="{{ url('/packages/' . $package->id) }}">Get Started!</a>
+        <a class="btn btn-lg btn-success btn-block" href="{{ url('/packages/' . $package->id) }}">Learn More!</a>
         </div>
     </div>
     <hr>

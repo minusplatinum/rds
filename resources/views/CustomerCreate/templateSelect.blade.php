@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 <div class="container">
-    <form action="{{ route('UpdateTemplate') }}" method="POST">
+    <form id="templateSelectForm" action="{{ route('UpdateTemplate') }}" method="POST">
         {{ csrf_field() }}
         {{ method_field('patch') }}
        <div class="row card p-3">
@@ -19,22 +19,13 @@
                             <div class="card-body">
                                 <p class="card-text">{{ $template->description }}</p>
                             </div>
+                            <div class="card-footer">
+                                <button id="template_id" name="template_id" class="btn btn-lg btn-block btn-success" form="templateSelectForm" type="submit" value="{{ $template->id }}">Select</button>
+                            </div>
                         </div>
                     </div>
                 @endforeach
             </div>
-            <div class="form-control"> 
-                <select name="template_id" id="template_id" class="form-control">
-                    <option value="Select a template" selected="selected">Select A Template</option>
-                    <option name="template_id" value="{{ $templates[0]['id'] }}">{{ $templates[0]['name'] }}</option>
-                    <option name="package_id" value="{{ $templates[1]['id'] }}">{{ $templates[1]['name'] }}</option>
-                    <option name="package_id" value="{{ $templates[2]['id'] }}">{{ $templates[2]['name'] }}</option>
-                    <option name="package_id" value="{{ $templates[3]['id'] }}">{{ $templates[3]['name'] }}</option>
-                    <option name="package_id" value="{{ $templates[4]['id'] }}">{{ $templates[4]['name'] }}</option>
-                    <option name="package_id" value="{{ $templates[5]['id'] }}">{{ $templates[5]['name'] }}</option>
-                </select>
-                <input type="submit" class="btn btn-block btn-lg btn-success form-control my-2">
-            </div> 
        </div>
     </form> 
 </div>

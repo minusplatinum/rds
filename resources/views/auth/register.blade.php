@@ -189,6 +189,7 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
+                            <input type="hidden" name="package_id" id="package_id" value="{{ $package_id }}">
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Register') }}
                                 </button>

@@ -38,8 +38,6 @@ Route::get('template/modernBusiness', 'TemplateController@showTemplateSix')->nam
  */
 Auth::routes();
 
-Route::get('customer/select-package', 'HomeController@selectPackage')->name('SelectPackage');
-
 Route::get('customer/select-template', 'HomeController@selectTemplate')->name('SelectTemplate');
 
 Route::get('customer/order-confirm', 'HomeController@orderConfirm')->name('OrderConfirm');
@@ -47,8 +45,6 @@ Route::get('customer/order-confirm', 'HomeController@orderConfirm')->name('Order
 Route::get('customer/customer-payment', 'HomeController@customerPayment')->name('CustomerPayment');
 
 Route::post('customer/customer-payment', 'HomeController@customerPaymentPost')->name('customerPaymentPost');
-
-Route::patch('customer/select-package', 'HomeController@updatePackage')->name('UpdatePackage');
 
 Route::patch('customer/select-template', 'HomeController@updateTemplate')->name('UpdateTemplate');
 

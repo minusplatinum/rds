@@ -19,7 +19,7 @@
                 </div>
                 <div class="card-body">
                     
-                    <a href="{{ url('/register') }}" class="btn btn-success">Sign Up!</a>
+                        <a href="{{ route('register', ['package_id' => 2]) }}" class="btn btn-success">Sign Up!</a>
                 </div>
             </div><!-- /.card -->
         </div><!-- /.col-lg-9 -->

@@ -28,7 +28,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = 'customer/select-package';
+    protected $redirectTo = 'customer/select-template';
 
     /**
      * Create a new controller instance.
@@ -76,6 +76,7 @@ class RegisterController extends Controller
             'postal' => $data['postal'],
             'phone1' => $data['phone1'],
             'phone2' => $data['phone2'],
+            'package_id' =>$data['package_id'],
             'password' => Hash::make($data['password']),
         ]);
     }

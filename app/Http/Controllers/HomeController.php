@@ -25,36 +25,6 @@ class HomeController extends Controller
     }
 
     /**
-     * Show The Package Select Page.
-     */
-    public function selectPackage() {
-        $user = Auth::User();
-        $packages = Package::all();
-        
-        return view('CustomerCreate.packageSelect')->with('user', $user)->with('packages', $packages);
-    }
-
-    /**
-     * Update The Selected Package.
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function updatePackage(Request $request) {
-       $package = Package::findOrFail($request->package_id);
-       $user = Auth::user();
-       
-       $user->package_id = $package->id;
-       $user->package_name = $package->name;
-       $user->package_price = $package->price;
-
-        $user->update();
-
-        // redirect
-        return redirect()->route('SelectTemplate');
-
-    }
-
-    /**
      * Show the template select page.
      *
      * @return \Illuminate\Http\Response
@@ -179,11 +149,22 @@ class HomeController extends Controller
      */
     public function index()
     {
+        
         $user = Auth::user();
-        $template = Template::findOrFail($user->template_id);
-        $package = Package::findOrFail($user->package_id);
-        $quote = Inspiring::quote();
-        return view('pages.dashboard')->with('user', $user)->with('quote', $quote)->with('template', $template)->with('package', $package);
+        $templates = Template::all();
+        $packages = Package::all();
+        $template_id = $user->template_id;
+        $package_id = $user->package_id;
+        
+        if(!empty($template_id && !empty($package_id))){
+            $template = Template::find($template_id);
+            $package = Package::find($package_id);
+            $quote = Inspiring::quote();
+
+            return view('pages.dashboard')->with('user', $user)->with('quote', $quote)->with('template', $template)->with('package', $package);
+        } else{
+            return view('CustomerCreate.templateSelect')->with('user', $user)->with('packages', $packages)->with('templates', $templates);
+        }
     }
 
     public function editProfile()

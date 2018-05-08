@@ -101,14 +101,11 @@
         <div class="col-lg-4">
             <img src="{{ url('storage/cover_images/noimage.jpg') }}" alt="Package Image">
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-8">
             <input type="hidden" name="package_id" value="{{ $package->id }}">
             <h4>{{ $package->name }}</h4>
             <p>{{ $package->description }}</p>
             <span>${{ $package->price }}</span>
-        </div>
-        <div class="col-lg-2">
-                <a class="btn btn-lg btn-info" href="{{ url('customer/select-package') }}">Edit Package</a>
         </div>
     </div>
     <hr>
