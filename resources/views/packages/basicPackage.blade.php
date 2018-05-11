@@ -18,11 +18,29 @@
                 </div>
                 <div class="card-body">
                     <ul>
-                        <li>Responsive websites designed and optimized to work accross all devices, allowing your website to reach more visitors.</li>
-                        <li>Take advantage of the amazing features the jQuery plugin library has to offer, adding anamations and special effects to your website.</li>
-                        <li>Use the Bootstrap 4 framework to give your website a modern look and feel, utilizing the variety of built in classes to style your website.</li>
-                        <li>Enjoy custom website features like newsletter sign-ups, contact forms, image carousels, sliders and much more. </li>
-                        <li>The Basic Website Package includes up to 5 website pages, additional pages are able to be purchased during sign up.</li>
+                        <li>Responsive websites designed and optimized to work accross all devices, allowing your website to reach the maximum amount of visitors.</li>
+                        <li>Take advantage of the amazing features the jQuery plugin library has to offer, adding anamations, effects and special utilities to your website.</li>
+                        <li>Use the Bootstrap 4 framework to give your website a modern look and feel, utilizing the variety of built in classes, custom helpers and utilities to style your website.</li>
+                        <li>Enjoy custom website features like newsletter sign-ups, contact forms, image carousels, Google Maps integration and much more. </li>
+                    </ul>
+                </div>
+            </div><!-- /.card -->
+
+            <div class="card card-outline-secondary my-4">
+                <div class="card-header">
+                    Package Details
+                </div>
+                <div class="card-body">
+                    <h5>Price: $99</h5>
+                    <h6>Whats Included</h6>
+                    <ul>
+                        <li>Up to 5 responsive website pages are included</li>
+                        <li>Choose one of our FREE templates for your website</li>
+                        <li>Responsive image gallery and image slider</li>
+                        <li>Integrated Google maps into your website</li>
+                        <li>Up to 5 domain email accounts are included</li>
+                        <li>1 MYSQL database is included with phpmyadmin access</li>
+                        <li>Easy to use control panel to maintain your website</li>
                     </ul>
                 </div>
             </div><!-- /.card -->
@@ -32,7 +50,7 @@
                     Package Extras
                 </div>
                 <div class="card-body">
-                    <p>During the sign up process you will have a chance to add extras to your package, make changes to package defaults and make custom requests.</p>
+                    <p>During the sign up process you will have a chance to request package extras, change package defaults and make special requests.</p>
                     <h6>Available Extras</h6>
                     <div class="row">
                         <div class="col-lg-6">
@@ -40,6 +58,7 @@
                                 <li>Website domain name registration services.</li>
                                 <li>Website and email hosting services.</li>
                                 <li>Custom website themes and templates.</li>
+                                <li>Custom website features and widgets.</li>
                             </ul>
                         </div>
                         <div class="col-lg-6">
@@ -47,8 +66,10 @@
                                 <li>Bring your own paid template or theme.</li>
                                 <li>Basic CMS and Ecommerce installations.</li>
                                 <li>Responsive image galleries and content sliders.</li>
+                                <li>Add extra databases to your website.</li>
                             </ul>
                         </div>
+                        <p class="m-auto"><small>** Package Extras are purchased after account creation **</small></p>
                     </div>
                 </div>
                 <div class="card-footer">
