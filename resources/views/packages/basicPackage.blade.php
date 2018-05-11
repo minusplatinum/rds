@@ -33,15 +33,24 @@
                 <div class="card-body">
                     <h5>Price: $99</h5>
                     <h6>Whats Included</h6>
-                    <ul>
-                        <li>Up to 5 responsive website pages are included</li>
-                        <li>Choose one of our FREE templates for your website</li>
-                        <li>Responsive image gallery and image slider</li>
-                        <li>Integrated Google maps into your website</li>
-                        <li>Up to 5 domain email accounts are included</li>
-                        <li>1 MYSQL database is included with phpmyadmin access</li>
-                        <li>Easy to use control panel to maintain your website</li>
-                    </ul>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <ul>
+                                <li>Up to 5 responsive website pages</li>
+                                <li>Basic website hosting service.</li>
+                                <li>Up to 5 custom email accounts</li>
+                                <li>Website control panel to maintain your website</li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-6">
+                            <ul>
+                                <li>1 MYSQL database with phpmyadmin access</li>
+                                <li>FREE templates to choose for your website</li>
+                                <li>Responsive image gallery and image slider</li>
+                                <li>Integrated Google maps into your website</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div><!-- /.card -->
 
